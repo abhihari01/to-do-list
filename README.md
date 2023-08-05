@@ -4,6 +4,8 @@ This project consist signin, sinup, and task create page which performs CRUD ope
 I have added sample images in 'samples' folder
 Here i have only added functionality.
 
+Requirements:
+pip install django-notifications-hq
 
 
 

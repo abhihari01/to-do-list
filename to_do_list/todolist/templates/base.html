@@ -1,0 +1,26 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My To-Do List App</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="{% url 'task_list' %}">Home</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'task_create' %}">Add Task</a></li>
+        <li><a href="{% url 'signout' %}">Logout</a></li>
+      {% else %}
+        <li><a href="{% url 'signin' %}">Login</a></li>
+        <li><a href="{% url 'signup' %}">Register</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+  <div class="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>
